@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container">
+    <div class="addEmployee">
+        <div class="row">
+            <div class="col s3">
+            </div>
+            <div class="col s6">
+                <h3 style="text-align: center;">New Employee</h3>
+                <form (ngSubmit)="addEmployee()" name="addEmployee">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" [(ngModel)]="employeeFirstname" name="employeeFirstname" class="validate">
+                        <br>
+                        <label class="form-text">Last Name</label>
+                        <input type="text" [(ngModel)]="employeeLastname" name="employeeLastname" class="validate">
+                        <br>
+                        <label class="form-text">Designation</label>
+                        <input type="text" [(ngModel)]="employeeDesignation" name="employeeDesignation"
+                            class="validate">
+                        <br>
+                        <label class="form-text">Address</label>
+                        <input type="text" [(ngModel)]="employeeAddress" name="employeeAddress" class="validate">
+                        <br>
+                        <label class="form-text">Profile Image</label>
+                        <br>
+                        <br>
+                        <input type="file" [(ngModel)]="profileImage" name="profileImage" class="validate" ng2FileSelect
+                            [uploader]="uploader">
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col s4"></div>
+                            <div class="col s4">
+                                <button class="btn btn-success" type="submit">SUBMIT</button>
+                            </div>
+                            <div class="col s4"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col s3">
+            </div>
+        </div>
+    </div>
+</div>

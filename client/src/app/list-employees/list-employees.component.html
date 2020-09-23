@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col col-6 col-sm-6">
+            <table>
+                <tr>
+                    <td><input type="date" placeholder="From Date" [(ngModel)]="fromDate" name="fromDate" class="validate"></td>
+                    <td>|</td>
+                    <td><input type="date" placeholder="To Date" [(ngModel)]="toDate" name="toDate" class="validate"></td>
+                    <td><button class="btn btn-success" type="submit" (click)="filterData()">FILTER BY DATE</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="col s12 m4" *ngFor="let i of employeeData">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="http://localhost:8080/employee/profileImage/{{i.profileImage}}" width="1200"
+                            height="300" class="img-fluid ">
+                        <div class="mask flex-center rgba-red-strong">
+                            <h5 class="card-title">{{i.employeeFullname}}</h5>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title grey-text text-darken-4">{{i.employeeDesignation}}</span>
+                        <p>{{i.employeeAddress}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Employee Portal</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="">Sign out</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="col s12 m7">
+    <h2 style="text-align: center;" class="header">Welcome {{employeeData[0].employeeFirstname}}</h2>
+    <br>
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="http://localhost:8080/employee/profileImage/{{employeeData[0].profileImage}}">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p>Full Name : {{employeeData[0].employeeFullname}}</p>
+                <p>Address : {{employeeData[0].employeeAddress}}</p>
+                <p>Designation : {{employeeData[0].employeeDesignation}}</p>
+            </div>
+            <div class="card-action">
+                <p>We're happy to have you as our employee!</p>
+            </div>
+        </div>
+    </div>
+</div>
